@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { ModeToggle } from "@/components/ModeToggler";
 import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
@@ -28,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
@@ -55,7 +54,6 @@ export default function RootLayout({
                 </div>
               </main>
             </div>
-            <ModeToggle />
           </ThemeProvider>
         </body>
       </html>
