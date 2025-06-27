@@ -8,7 +8,7 @@ import { syncUser } from "@/actions/user.action";
 const Navbar = async () => {
   const user = await currentUser();
   // Get all details of currently logged in user, or create the info for first time.
-  if (user) await syncUser();
+  if (user) await syncUser(); // POST ACTION
 
   return (
     <nav className="sticky top-0 w-full border-b bg-background/95 backdrop-blur-2xl supports-[backdrop-filter]:bg-background/60 z-50">

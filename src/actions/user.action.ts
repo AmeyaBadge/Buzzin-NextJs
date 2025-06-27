@@ -35,3 +35,22 @@ export const syncUser = async () => {
     console.log("Error in SyncUser : ", error);
   }
 };
+
+export const getUserByClerkId = async (clerkId: string) => {
+  const user = prisma.user.findUnique({
+    where: {
+      clerkId,
+    },
+    include: {
+      _count: {
+        select: {
+          followers: true,
+          following: true,
+          posts: true,
+        },
+      },
+    },
+  });
+
+  return user;
+};
