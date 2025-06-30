@@ -126,7 +126,7 @@ export const toggleLike = async (postId: string) => {
                 data: {
                   type: "LIKE",
                   creatorId: userId,
-                  userId: userId, // Person who will recieve the notification
+                  userId: post.authorId, // Person who will recieve the notification
                   postId: postId,
                 },
               }),
