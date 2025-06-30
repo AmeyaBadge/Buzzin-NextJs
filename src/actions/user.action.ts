@@ -61,7 +61,7 @@ export const getUserByClerkId = async (clerkId: string) => {
 //Get the posgres document Id from ClerkId
 export const getDbUserId = async () => {
   const { userId: clerkId } = await auth();
-  if (!clerkId) throw new Error("Unauthorised access not allowed!");
+  if (!clerkId) return null;
 
   const user = await prisma.user.findUnique({
     where: {
@@ -82,6 +82,8 @@ export const getRandomUsers = async () => {
   try {
     // Get 3 random users, exluding self and the ones we already follow
     const userId = await getDbUserId();
+
+    if (!userId) return [];
 
     const randomUsers = await prisma.user.findMany({
       where: {
@@ -117,6 +119,8 @@ export const getRandomUsers = async () => {
 export const toggleFollow = async (targetUserId: string) => {
   try {
     const userId = await getDbUserId();
+
+    if (!userId) return;
     if (targetUserId === userId) throw new Error("You cannot follow yourself!");
     const existingFollow = await prisma.follows.findUnique({
       where: {
