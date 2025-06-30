@@ -36,17 +36,19 @@ import { useReducer, useState } from "react";
 import toast from "react-hot-toast";
 
 const ProfilePageClient = ({
-  user,
+  user, // Whose profile is being seen [username]
   posts,
   likedPosts,
   isFollowing: initialIsFollowing,
+  dbUserId,
 }: {
   user: NonNullable<User>;
   posts: Posts;
   likedPosts: Posts;
   isFollowing: boolean;
+  dbUserId: string;
 }) => {
-  const { user: currentUser } = useUser();
+  const { user: currentUser } = useUser(); // Currently logged in user
 
   const [showEditingDialog, setShowEditingDialog] = useState(false);
   const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
@@ -73,7 +75,7 @@ const ProfilePageClient = ({
   };
 
   const handleFollow = async () => {
-    if (!currentUser) return;
+    if (!dbUserId) return;
 
     try {
       setIsUpdatingFollow(true);
@@ -221,7 +223,7 @@ const ProfilePageClient = ({
             <div className="space-y-6">
               {posts.length > 0 ? (
                 posts.map((post) => (
-                  <PostCard key={post.id} post={post} dbUserId={user.id} />
+                  <PostCard key={post.id} post={post} dbUserId={dbUserId} />
                 ))
               ) : (
                 <div className="text-center py-8 text-muted-foreground">

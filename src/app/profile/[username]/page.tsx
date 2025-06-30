@@ -7,6 +7,7 @@ import {
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProfilePageClient from "./ProfilePageClient";
+import { getDbUserId } from "@/actions/user.action";
 
 export const generateMetadata = async ({
   params,
@@ -35,6 +36,7 @@ const ProfilePageServer = async ({
 }) => {
   const { username } = await params;
   const user = await getProfileByUsername(username);
+  const dbUserId = await getDbUserId();
 
   if (!user) notFound();
 
@@ -50,6 +52,7 @@ const ProfilePageServer = async ({
       posts={posts}
       likedPosts={likedPosts}
       isFollowing={isCurrentUserFollowing}
+      dbUserId={dbUserId}
     />
   );
 };
