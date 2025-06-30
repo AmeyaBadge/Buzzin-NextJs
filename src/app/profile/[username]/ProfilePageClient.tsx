@@ -46,7 +46,7 @@ const ProfilePageClient = ({
   posts: Posts;
   likedPosts: Posts;
   isFollowing: boolean;
-  dbUserId: string;
+  dbUserId: string | null;
 }) => {
   const { user: currentUser } = useUser(); // Currently logged in user
 
