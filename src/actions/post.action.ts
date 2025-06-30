@@ -29,8 +29,6 @@ export const createPost = async (content: string, imageUrl: string) => {
 
 export const getPosts = async () => {
   try {
-    const userId = await getDbUserId();
-
     const posts = await prisma.post.findMany({
       orderBy: {
         createdAt: "desc",
@@ -38,18 +36,17 @@ export const getPosts = async () => {
       include: {
         author: {
           select: {
+            id: true,
             name: true,
             image: true,
             username: true,
           },
         },
         comments: {
-          select: {
-            content: true,
-            id: true,
-            createdAt: true,
+          include: {
             author: {
               select: {
+                id: true,
                 name: true,
                 username: true,
                 image: true,

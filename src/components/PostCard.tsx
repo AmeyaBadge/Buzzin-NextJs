@@ -33,13 +33,15 @@ const PostCard = ({
   post: Post;
   dbUserId: string | null;
 }) => {
+  console.log(post);
+  console.log("Dbuser id postcard : ", dbUserId);
   const { user } = useUser();
   const [newComment, setNewComment] = useState("");
   const [isCommenting, setIsCommenting] = useState(false);
   const [isLiking, setIsLiking] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [hasLiked, setHasLiked] = useState(
-    post.likes.some((like) => like.userId == dbUserId)
+    post.likes.some((like) => like.userId === dbUserId)
   );
   const [optimisticLikes, setOptimisticLikes] = useState(post._count.likes);
   const [showComments, setShowComments] = useState(false);
