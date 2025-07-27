@@ -17,7 +17,8 @@ A modern, full-featured social media platform built with Next.js 15, TypeScript,
 
 ### 🎥 Demo Video
 
-https://github.com/user-attachments/assets/your-demo-video.mp4
+https://github.com/user-attachments/assets/0bf25cae-f7ce-4207-8cb8-e8701469f523
+
 
 _Quick walkthrough of Buzzin's main features_
 
@@ -322,7 +323,7 @@ We welcome contributions from the community! Here's how you can help:
 
 Currently, there are no major known issues. If you encounter any bugs or have feature requests:
 
-1. **Check existing issues** in the [GitHub Issues](https://github.com/AmeyaBadge/Socially-NextJs/issues)
+1. **Check existing issues** in the [GitHub Issues](https://github.com/AmeyaBadge/Buzzin-NextJs/issues)
 2. **Create a new issue** with detailed information
 3. **Include steps to reproduce** any bugs
 4. **Provide system information** (OS, browser, Node.js version)
