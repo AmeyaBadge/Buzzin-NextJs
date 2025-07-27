@@ -18,8 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Socially",
-  description: "A modern social media application powered by Next.js",
+  title: "Buzzin",
+  description:
+    "Stay Buzzin'. Stay connected - A modern social media application powered by Next.js",
 };
 
 export default function RootLayout({

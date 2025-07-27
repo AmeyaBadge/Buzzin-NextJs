@@ -19,7 +19,7 @@ const Navbar = async () => {
               href="/"
               className="text-xl font-bold text-primary font-mono tracking-wider"
             >
-              Socially
+              Buzzin
             </Link>
           </div>
 
