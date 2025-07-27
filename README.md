@@ -15,6 +15,47 @@ A modern, full-featured social media platform built with Next.js 15, TypeScript,
 
 🔗 **[Visit Buzzin Live](https://buzzin-next-js.vercel.app/)**
 
+### 🎥 Demo Video
+
+https://github.com/user-attachments/assets/your-demo-video.mp4
+
+_Quick walkthrough of Buzzin's main features_
+
+---
+
+## 📷 Screenshots
+
+### 🏠 Homepage & Feed
+
+<div align="center">
+  <img src="./public/screenshots/homepage-light.png" alt="Buzzin Homepage - Light Mode" width="45%">
+  <img src="./public/screenshots/homepage-dark.png" alt="Buzzin Homepage - Dark Mode" width="45%">
+</div>
+
+### 👤 User Profiles
+
+<div align="center">
+  <img src="./public/screenshots/profile-page.png" alt="User Profile Page" width="70%">
+</div>
+
+<!-- ### ✍️ Create & Share Posts
+
+<div align="center">
+  <img src="./public/screenshots/create-post.png" alt="Create Post Interface" width="70%">
+</div> -->
+
+### 🔔 Real-time Notifications
+
+<div align="center">
+  <img src="./public/screenshots/notifications.png" alt="Notifications Page" width="70%">
+</div>
+
+### 📱 Mobile Responsive
+
+<div align="center">
+  <img src="./public/screenshots/mobile-view.png" alt="Mobile Responsive Design" width="40%">
+</div>
+
 ---
 
 ## 📖 About The Project
