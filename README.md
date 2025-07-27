@@ -13,7 +13,7 @@ A modern, full-featured social media platform built with Next.js 15, TypeScript,
 
 ## 🌟 Live Demo
 
-🔗 **[Visit Buzzin Live](https://socially-next-js-two.vercel.app/)**
+🔗 **[Visit Buzzin Live](https://buzzin-next-js.vercel.app/)**
 
 ---
 
@@ -145,8 +145,8 @@ buzzin/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/AmeyaBadge/Socially-NextJs.git
-   cd Socially-NextJs
+   git clone https://github.com/AmeyaBadge/Buzzin-NextJs.git
+   cd Buzzin-NextJs
    ```
 
 2. **Install dependencies**
@@ -293,7 +293,7 @@ Currently, there are no major known issues. If you encounter any bugs or have fe
 **Ameya Badge**
 
 - GitHub: [@AmeyaBadge](https://github.com/AmeyaBadge)
-- Project Link: [https://github.com/AmeyaBadge/Socially-NextJs](https://github.com/AmeyaBadge/Socially-NextJs)
+- Project Link: [https://github.com/AmeyaBadge/Buzzin-NextJs](https://github.com/AmeyaBadge/Buzzin-NextJs)
 
 ---
 
